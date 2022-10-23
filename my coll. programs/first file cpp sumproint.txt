@@ -1,0 +1,77 @@
+SUM PRODUCT OF DIGITS OF INT
+
+
+WAY :1
+
+#include<iostream>
+using namespace std;
+main() 
+{ int no,a,sum=0,pro=1;
+cout<<"enter an integer no.\n";
+cin>>no;
+while (no>0||no!=0)
+{a=no%10;
+no=no/10;
+sum+=a;
+pro*=a;
+}
+cout<<"sum of the digits of the integer number:"<<sum<<"\n and product of the digits of the number:"<<pro<<endl;
+return 0;
+}
+
+
+
+
+WAY:2
+
+#include<iostream>
+using namespace std;
+int sumproint(int n,int &sum,int &pro)
+{
+ int a;
+ sum=0,pro=1;
+ while (n>0)
+  {
+  a=n%10;
+  n=n/10;
+  sum+=a;
+  pro*=a;
+  }
+cout<<"sum of the digits of the integer number:"<<sum<<"\n and product of the digits of the number:"<<pro<<endl;
+}
+ main()
+{
+int no,s,p;
+cout<<"enter an integer no.\n";
+cin>>no;
+sumproint(no,s,p);
+return 0;
+}
+
+
+WAY:3
+
+#include<iostream>
+using namespace std;
+int sumproint(int n,int &sum,int &pro)
+{
+ int a;
+ sum=0,pro=1;
+ while (n>0)
+  {
+  a=n%10;
+  n=n/10;
+  sum+=a;
+  pro*=a;
+  }
+}
+ main()
+{
+int no,s,p;
+cout<<"enter an integer no.\n";
+cin>>no;
+sumproint(no,s,p);
+cout<<"SUM="<<s<<"\nPRODUCT="<<p;
+cout<<"\n sum of the digits of the integer number:"<<s<<"\n and product of the digits of the number:"<<p<<endl;
+return 0;
+}
